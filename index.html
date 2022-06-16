@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Became A Color Nerd</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section id="main"  class="flexCenter">
+        <section id="mainBox" class="flexCenter">
+            <div id="title" class="flexCenter">RGB color game</div>
+            <div id="userInterface" class="flexCenter">
+                <form>
+                    <tr>
+                        <p  class="colorName">red</p>
+                        <th>
+                            <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" max="255" type="text" id="redForm" maxlength="3">
+                        </th>
+                    </tr>
+                    <tr>
+                        <p class="colorName">green</p>
+                        <th>
+                            <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" max="255" type="text" id="greenForm" maxlength="3">
+                        </th>
+                    </tr>
+                    <tr>
+                        <p class="colorName">blue</p>
+                        <th>
+                            <input oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*?)\..*/g, '$1');" max="255" type="text" id="blueForm" maxlength="3">
+                        </th>
+                    </tr>
+                </form>
+                <button onclick="buttonClicked()" id="validateButton">Guess !</button>
+            </div>
+        </section>
+        <div id="jauge" class="jauge flexCenter">
+            <p>Red</p>
+            <div class="container">
+            <div  id="jaugeRed" class="progressBar scorePercent"></div>
+            </div>
+        </div>
+        <div class="jauge flexCenter">
+            <p>Green</p>
+            <div class="container">
+            <div  id="jaugeGreen" class="progressBar scorePercent"></div>
+            </div>
+        </div>
+        <div class="jauge flexCenter">
+            <p>Blue</p>
+            <div class="container">
+            <div  id="jaugeBlue" class="progressBar scorePercent"></div>
+            </div>
+        </div>
+    </section>
+    <script src="app.js"></script>
+</body>
+</html>
